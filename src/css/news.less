@@ -1,0 +1,126 @@
+.page-news {
+  .site-main {
+    &.news {
+      #news-activity {
+        border: none;
+
+        > li {
+          width: 50%;
+          text-align: center;
+
+          > a {
+            border: none;
+            color: #888;
+
+            &:hover {
+              background: none;
+            }
+          }
+
+          &.active {
+            > a {
+              color: @site-color;
+              border-bottom: 4px solid @site-color;
+            }
+          }
+        }
+      }
+
+      #news-activity-details {
+        margin-top: 20px;
+        overflow: hidden;
+
+        .news-item {
+          margin-bottom: 25px;
+          padding-bottom: 25px;
+          border-bottom: 1px solid #d7d7d7;
+          box-shadow: 0 1px 0 #fff;
+          .clearfix();
+
+          > img {
+            max-width: 250px;
+          }
+
+          > div {
+            h3 {
+              color: @site-color;
+              margin-top: 0;
+              margin-bottom: 1rem;
+            }
+
+            .publish-date {
+              position: absolute;
+              top: 0;
+              left: 90%;
+              color: #888;
+            }
+
+            p {
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer .qr-code {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.mobile-view {
+  .site-main {
+    &.news {
+      margin-top: 76px;
+
+      #news-activity {
+        border-bottom: 1px solid #d8d8d8;
+
+        li.active {
+          background: @site-color;
+
+          > a {
+            background: @site-color;
+            color: #fff;
+          }
+        }
+
+        li a h3 {
+          font-size: 0.8rem;
+        }
+      }
+      #news-activity-details {
+        .news-item {
+          > div {
+            h3 {
+              font-size: 0.7rem;
+              margin-bottom: 0.5rem;
+            }
+
+            .publish-date {
+              position: relative;
+              display: inline-block;
+              left: 0;
+              margin-bottom: 0.3rem;
+            }
+
+            p {
+              overflow: hidden;
+              max-height: 1.6rem;
+              text-overflow: ellipsis;
+
+              &::after {
+                content: '……';
+                position: absolute;
+                top: 95%;
+                left: 15px;
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+}

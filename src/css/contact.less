@@ -1,0 +1,74 @@
+.page-contactus {
+  background-color: #f4f5f9;
+
+  .site-main {
+    &.contactus {
+      > div {
+        margin: 1.25rem 0;
+        border-bottom: 1px solid #d7d7d7;
+        box-shadow: 0 1px 0 #fff;
+
+        h3 {
+          color: @site-color;
+          margin-bottom: 1rem;
+        }
+
+        h4 {
+          margin: 1rem 0;
+        }
+
+        p:last-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .question-form {
+        > div {
+          padding-left: 0;
+          margin: 0.25rem 0;
+
+          &:last-child {
+            margin: 0 0 1.5rem 0;
+          }
+
+          .form-control {
+            border: none;
+          }
+
+          textarea {
+            resize: none;
+          }
+        }
+
+        .btn-send-question {
+          float: right;
+          margin: 0 0.85rem 1.5rem 0;
+          background: #999;
+          color: #fff;
+        }
+      }
+
+      .footer {
+        border: none;
+        box-shadow: none;
+
+        > span {
+          display: inline-block;
+          text-indent: 2px;
+          color: #888;
+        }
+        .qr-code {
+          .square(105px);
+          background: url('../img/QR-code.png') no-repeat scroll center center;
+          background-size: 100%;
+          margin: 10px 0 30px 0;
+        }
+      }
+    }
+  }
+
+  footer .qr-code {
+    display: none;
+    visibility: hidden;
+  }
+}

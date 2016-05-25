@@ -1,0 +1,179 @@
+.page-hire {
+  background-color: #fff;
+
+  .site-main {
+    .title {
+      color: @site-color;
+      margin-bottom: 20px;
+    }
+
+    &.hire {
+      .introduction {
+        .clearfix();
+        position: relative;
+        background-color: #f4f5f9;
+        padding: 0 25px 25px;
+
+        .intro-tip {
+          > div {
+            line-height: 25px;
+          }
+        }
+
+        .logo {
+          text-align: center;
+
+          img {
+            width: 230px;
+          }
+        }
+      }
+
+      .jobs-description {
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        .title {
+          padding: 0 15px;
+        }
+
+        .job-section {
+          margin: 25px 0;
+          padding: 0  15px 25px;
+          border-bottom: 1px solid #d7d7d7;
+          box-shadow: 0 1px 0 #fff;
+          overflow: hidden;
+
+          .get-job {
+            vertical-align: middle;
+            color: #333;
+            text-decoration: none;
+            font-size: @font-size-large;
+            position: relative;
+
+            &::before {
+              content: ' ';
+              position: absolute;
+              bottom: 0;
+              right: -24px;
+              border: 9px solid #333;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              border-right: 0;
+            }
+
+            &::after {
+              content: ' ';
+              position: absolute;
+              bottom: 0;
+              right: -22px;
+              border: 9px solid #fff;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              border-right: 0;
+            }
+
+            &[aria-expanded="true"] {
+              &::before {
+                content: ' ';
+                position: absolute;
+                bottom: 2px;
+                right: -26px;
+                border: 9px solid #333;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom: 0;
+              }
+
+              &::after {
+                content: ' ';
+                position: absolute;
+                bottom: 4px;
+                right: -26px;
+                border: 9px solid #fff;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom: 0;
+              }
+            }
+          }
+
+          .btn-primary {
+            position: relative;
+            color: @site-color;
+            float: right;
+            background-color: #fff;
+            border-color: @site-color;
+            border-radius: 0;
+            padding: 8px 30px;
+          }
+
+          .detail {
+            color: #888;
+
+            article {
+              padding-top: 15px;
+
+              > div {
+                padding: 8px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer .qr-code {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.mobile-view {
+  .site-main {
+    &.hire {
+      .introduction .logo {
+        display: none;
+      }
+
+      .jobs-description {
+        .job-section {
+          .get-job {
+            font-size: 0.7rem;
+
+            &::before,
+            &::after {
+              bottom: 2px;
+              border-width: 6px;
+            }
+
+            &::before {
+              right: -16px;
+            }
+
+            &::after {
+              right: -15px;
+            }
+
+            &[aria-expanded="true"] {
+              &::before,
+              &::after {
+                right: -16px;
+                border-width: 6px;
+              }
+
+              &::before {
+                bottom: 5px;
+              }
+
+              &::after {
+                bottom: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
