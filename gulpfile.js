@@ -40,20 +40,20 @@ gulp.task('combine', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-// Compile Coffeescript
-gulp.task('coffee', function () {
-    var files = glob.sync('./src/js/*.coffee');
+
+// Compile Js
+gulp.task('js', function () {
+    var files = glob.sync('./src/js/*.js');
     browserify({
         entries: files,
         debug: true,
-        extensions: ['.coffee']
+        extensions: ['.js']
     })
-    .transform('coffeeify')
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(rename('app.js'))
     .pipe(gulp.dest('./build/js/'))
-    .pipe(browserSync.reload({stream: true}));;
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // Compile LESS
@@ -68,7 +68,7 @@ gulp.task('less', function () {
 // Watch files changing
 gulp.task('watch', function () {
     gulp.watch(['./src/html/*.html', './src/html/**/*.html'], ['combine']);
-    gulp.watch('./src/js/*.coffee', ['coffee']);
+    gulp.watch('./src/js/*.js', ['js']);
     gulp.watch('./src/css/*.less', ['less']);
 
     var files = [
@@ -84,4 +84,4 @@ gulp.task('watch', function () {
     });
 });
 
-gulp.task('default', ['clean', 'image', 'lib', 'combine', 'coffee', 'less', 'watch']);
+gulp.task('default', ['clean', 'image', 'lib', 'combine', 'js', 'less', 'watch']);
