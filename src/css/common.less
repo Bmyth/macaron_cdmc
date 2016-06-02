@@ -20,34 +20,25 @@ header {
     z-index: 103;
     width: 100%;
     min-height: 50px;
-    border-bottom: 1px solid #d8d8d8;
-    background: #fff;
+    border-bottom: 1px solid #666;
+    background: @site-color;
 
     .navbar {
       margin-bottom: 0;
     }
 
     .navbar-brand {
-      background: url('../img/logo2.png') no-repeat scroll center center;
-      .size(6.25rem, 2.25rem);
+      background: url('../img/logo.png') no-repeat scroll center center;
+      .size(8.25rem, 2rem);
       padding: 0;
       margin: 15px 20px 15px 0;
       text-indent: -9999px;
       background-size: auto 2.25rem;
     }
 
-    .navbar-slogan {
-      float: left;
-      padding-left: 0.75rem;
-      border-left: 1px solid #dcdcdc;
-      line-height: 1.5rem;
-      margin: 25px 0 20px 0;
-      font-size: 0.9rem;
-      color: @site-color;
-    }
-
     .navbar-nav {
       float: right;
+      margin-right: 60px;
 
       > li {
         padding: 24px 0 20px 0;
@@ -55,53 +46,9 @@ header {
 
         > a {
           font-size: 16px;
-          color: @main-font-color;
-          padding: 5px 20px;
-
-          &:hover, &:focus {
-            background: none;
-            color: @site-color;
-            transition: color 218ms cubic-bezier(.42,0,.58,1);
-          }
-        }
-
-        &:hover {
-          &::before {
-            content: ' ';
-            position: absolute;
-            bottom: -1px;
-            border: 5px solid #0b9eed;
-            left: calc(50% - 5px);
-            border-left-color: transparent;
-            border-right-color: transparent;
-            border-top: 0;
-          }
-
-          &::after {
-            content: ' ';
-            .size(100%, 3px);
-            position: absolute;
-            bottom: -3px;
-            background-color: @site-color;
-          }
-
-          > a {
-            color: @site-color;
-          }
-        }
-
-        &.active {
-          &::before, &::after {
-            content: '' !important;
-          }
-
-          > a {
-            color: @site-color;
-          }
-
-          &::before, &::after {
-            content: '';
-          }
+          color: #fff;
+          padding: 5px 16px;
+          background: transparent;
         }
       }
     }
@@ -111,6 +58,18 @@ header {
 
       .icon-bar {
         background: @site-color;
+      }
+    }
+
+    .lang{
+      position: absolute;
+      right: 0;
+      top: 29px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 0px 6px;
+      a{
+        color: @site-color;
       }
     }
   }
@@ -123,28 +82,54 @@ header {
 }
 
 footer {
-  padding: 8px 0;
+  padding: 20px 0;
   width: 100%;
   font-size: @font-size-small;
-  background: @site-color;
-  position: relative;
-
-  > div {
-    color: #fff;
-    text-align: center;
-
-    &:first-child {
-      margin-bottom: 5px;
+  background: #eee;
+  .container{
+    position: relative;
+  }
+  .left-side{
+    img{
+      width: 200px;
+      margin-bottom: 20px;
+    } 
+    p{
+      color: #999;
+      margin: 5px 0;
+      font-size: 14px;
+      span{
+        display: inline-block;
+        width: 200px;
+      }
     }
   }
-
-  div.qr-code {
+  .right-side{
     position: absolute;
-    bottom: 10px;
-    left: 15%;
-    .square(105px);
-    background: url('../img/QR-code.png') no-repeat scroll center center;
-    background-size: 100%;
+    left: 480px;
+    top: 8px;
+    img.wx{
+      width: 160px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .follow{
+      margin-left: 200px;
+      .nav{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        a{
+          padding: 0 2px;
+        }
+      }
+      p{
+        color: #999;
+        margin: 4px 0;
+        font-size: 14px;
+      }
+    }
   }
 }
 
