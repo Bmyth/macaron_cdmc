@@ -1,0 +1,90 @@
+.page-business {
+  background-color: #f4f5f9;
+
+  .site-main {
+    &.business {
+       div {
+        margin: 1.25rem 0;
+
+        h2 {
+          color: black;
+          margin-top: 10px;
+        }
+
+        h4 {
+          color: grey;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        p:last-child {
+          margin-bottom: 1.5rem;
+        }
+
+        img {
+          .square(300px);
+          float: left;
+          padding-right: 10px;
+        }
+
+        hr {
+          height:0px;
+          width: 200px;
+          border-top:2px solid #FFA500;
+          margin-bottom: 5px;
+        }
+
+        .nav > li > a:focus, a:hover {
+          text-decoration: none;
+          background-color: #53155A;
+          color: #ffffff;
+        }
+
+        a {
+          color: #808080;
+          text-decoration: none;
+        }
+      }
+
+      .footer {
+        border: none;
+        box-shadow: none;
+
+        > span {
+          display: inline-block;
+          text-indent: 2px;
+          color: #888;
+        }
+        .qr-code {
+          .square(105px);
+          background: url('../img/QR-code.png') no-repeat scroll center center;
+          background-size: 100%;
+          margin: 10px 0 30px 0;
+        }
+      }
+    }
+  }
+
+  footer .qr-code {
+    display: none;
+    visibility: hidden;
+  }
+
+  .left-block {
+    display:inline-block;
+    width: 30%;
+    padding-right: 10px
+  }
+
+  .right-block {
+    display:inline-block;
+    width: 30%;
+    padding-right: 10px
+  }
+
+  .line {
+    display: inline-block;
+    width:1px; height:100px;
+    border-left: 1px solid #000;
+  }
+}

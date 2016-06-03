@@ -1,0 +1,84 @@
+.page-aboutus {
+  background-color: #f4f5f9;
+
+  .site-main {
+    &.aboutus {
+      > div {
+        margin: 0 0 30px 0;
+
+        h3 {
+          color: #082E54;
+          margin-bottom: 0;
+        }
+
+        h4 {
+          color: #082E54;
+          margin-bottom: 0;
+        }
+
+        h5 {
+          color: grey;
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+
+        p:last-child {
+          margin-bottom: 1.5rem;
+        }
+
+        .nav > li > a:focus, a:hover {
+          text-decoration: none;
+          background-color: #53155A;
+          color: #ffffff;
+        }
+
+        a {
+          color: #808080;
+          text-decoration: none;
+        }
+      }
+
+      .footer {
+        border: none;
+        box-shadow: none;
+
+        > span {
+          display: inline-block;
+          text-indent: 2px;
+          color: #888;
+        }
+        .qr-code {
+          .square(105px);
+          background: url('../img/QR-code.png') no-repeat scroll center center;
+          background-size: 100%;
+          margin: 10px 0 30px 0;
+        }
+      }
+    }
+  }
+
+  footer .qr-code {
+    display: none;
+    visibility: hidden;
+  }
+
+  .feature-image {
+    background: url('../img/about.png') center repeat;
+    height:200px;
+    margin-bottom: 2rem;
+    position:relative;
+  }
+
+  .left-bar {
+    border-left: 3px solid #A020F0;
+    padding: 0 0 0 15px;
+  }
+
+   .sub-ul {
+     list-style-type:none;
+     margin-left: 20px;
+     padding-left:20px;
+     border-left: 1px solid grey;
+   }
+}
