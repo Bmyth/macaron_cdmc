@@ -1,9 +1,5 @@
 var MOBILE_BREAK_POINT, fontSizeDetector, mobileDetector;
 
-window.jQuery = window.$ = require('jquery');
-
-require('bootstrap');
-
 MOBILE_BREAK_POINT = 768;
 
 fontSizeDetector = function() {
