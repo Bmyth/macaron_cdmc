@@ -10,6 +10,10 @@ html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, 'Microsoft Yahei', sans-serif;
 }
 
+.container{
+  min-width: 1000px !important;
+}
+
 header {
   .clearfix();
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
@@ -49,7 +53,7 @@ header {
     }
 
     .navbar-brand {
-      background: url('../img/logo.png') no-repeat scroll center center;
+      background: url('../img/cdmc-logo-1.png') no-repeat scroll center center;
       .size(8.25rem, 2rem);
       padding: 0;
       margin: 15px 20px 15px 0;
@@ -112,13 +116,13 @@ footer {
   }
   .left-side{
     img{
-      width: 200px;
-      margin-bottom: 20px;
+      width: 180px;
+      margin-bottom: 14px;
     } 
     p{
-      color: #999;
-      margin: 5px 0;
-      font-size: 14px;
+      color: #aaa;
+      margin: 2px 0;
+      font-size: 12px;
       span{
         display: inline-block;
         width: 200px;
@@ -127,16 +131,17 @@ footer {
   }
   .right-side{
     position: absolute;
-    left: 480px;
+    left: 520px;
     top: 8px;
     img.wx{
-      width: 160px;
+      width: 135px;
       position: absolute;
       top: 0;
       left: 0;
     }
     .follow{
-      margin-left: 200px;
+      margin-left: 160px;
+      padding-top: 48px;
       .nav{
         display: block;
         width: 100%;
@@ -148,59 +153,12 @@ footer {
       p{
         color: #999;
         margin: 4px 0;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
 }
 
 .mobile-view {
-  header.site-header {
-    top: 0;
 
-    .navbar-nav {
-      margin: 0;
-      float: none;
-      text-align: center;
-
-      > li {
-        padding: 0.4rem 0;
-        border-top: 1px solid #d8d8d8;
-
-        &::before, &::after {
-          display: none;
-        }
-      }
-    }
-
-    .navbar-toggle {
-      margin-right: 0;
-    }
-
-    .navbar-brand {
-      width: 3.5rem;
-      background-size: auto 1.4rem;
-    }
-
-    .navbar-slogan {
-      font-size: @font-size-base;
-    }
-  }
-
-  .index-top {
-    display: none;
-  }
-
-  .site-main {
-    margin-top: 82px;
-    padding: 0;
-  }
-
-  footer div.qr-code {
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-    .size(100%, 110px);
-    background-size: 106px 106px;
-  }
 }

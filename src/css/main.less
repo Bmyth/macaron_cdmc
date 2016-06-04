@@ -1,8 +1,8 @@
 .page-index {
-  background: #000;
+  min-width: 1000px;
   header .bg{
     background: #333;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   .index-top {
     position: fixed;
@@ -60,7 +60,7 @@
   }
 
   .site-main {
-    margin: 77px auto 0;
+    margin: 0px auto 0;
   }
 
   #banner{
@@ -127,7 +127,7 @@
   }
 
   #video-container{
-    padding: 20px;
+    padding: 45px;
     background: #fff;
     .video-slide{
       overflow: hidden;
@@ -152,19 +152,51 @@
           margin: 0 auto;
           overflow: hidden;
         }
+        .desc{
+          position: absolute;
+          bottom: 0;
+          color: #fff;
+          text-align: left;
+          left: 0;
+          padding: 2px 12px 2px;
+          width: 94%;
+          height: 26px;
+          z-index: 2;
+          left: 3%;
+          i{
+            float: right;
+            color: #fff;
+            margin-right: 5px;
+            display: none;
+          }
+        }
+        .desc-bg{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 94%;
+          height: 26px;
+          padding: 2px 12px 2px;
+          z-index: 1;
+          background: #333;
+          opacity: 0.7;
+          left: 3%;
+        }
       }
-      .thumb:hover{
-
+      .thumb:hover .desc i{
+        display: block;
       }
     }
   }
 
   #business {
+    margin-bottom: 100px;
     .heading{
       padding-top: 45px; 
       padding-bottom: 45px;
-      border-bottom: 1px solid #aaa;
+      border-bottom: 1px solid #ddd;
       background: #fff;
+      margin-bottom: 45px;
       h4{
         text-align: center;
         color: #888;
@@ -178,6 +210,45 @@
         width: 150px;
         padding: 2px;
         margin: 0 auto;
+      }
+    }
+    .container{
+      text-align: center;
+      .feature{
+        display: inline-block;
+        width: 300px;
+        height: 100px;
+        margin: 28px 0;
+        padding: 0px 15px 0 25px;
+        vertical-align: top;
+        .row-1{
+          width: 100%;
+          position: relative;
+          padding-bottom: 10px;
+          img{
+            width: 50px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          }
+          p{
+            text-align: left;
+            color: #888;
+            margin: 0;
+            margin-left: 60px; 
+          }
+          .big{
+            font-size: 18px;
+            margin-top: 5px;
+          }
+        }
+        .detail{
+          text-align: left;
+          color: #b2b2b2;
+        }
+      }
+      #f2, #f3, #f5{
+        border-left: 1px solid #ddd; 
       }
     }
   }
