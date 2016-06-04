@@ -4,7 +4,7 @@ $(function() {
   		slidesToScroll: 1,
   		adaptiveHeight: true,
   		prevArrow : "<div class='slick-prev-arrow slick-arrow'><i class='glyphicon glyphicon-chevron-left'></i></div>",
-        nextArrow : "<div class='slick-next-arrow slick-arrow'><i class='glyphicon glyphicon-chevron-right'></i></div>",
+        nextArrow : "<div class='slick-next-arrow slick-arrow'><i class='glyphicon glyphicon-chevron-right'></i></div>"
 	})
 
 	$("#banner .bottom-block li").click(function(){
@@ -20,9 +20,17 @@ $(function() {
 		$("#banner .bottom-block li[sid=" + sid + "]").addClass('active');
 	})
 
-
 	$(".video-slide").slick({
 		slidesToShow: 4,
-  		slidesToScroll: 2
+  		slidesToScroll: 2,
+  		arrows: false
 	});
+
+	$("#video-container .slick-prev-arrow").click(function(){
+		$(".video-slide").slick('slickPrev');
+	})
+
+	$("#video-container .slick-next-arrow").click(function(){
+		$(".video-slide").slick('slickNext');
+	})
 })

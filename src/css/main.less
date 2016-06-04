@@ -100,30 +100,84 @@
   }
 
   #video-container{
-    padding: 45px;
+    margin: 40px 32px;
     background: #fff;
+    position: relative;
+    .slick-arrow{
+      position: absolute;
+      height: 100%;
+      width: 40px;
+      top: 0;
+      z-index: 100px;
+      background: #eee;
+      cursor: pointer;
+      i{
+        position: relative;
+        top: 45%;
+        width: 100%;
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+        color: #aaa;
+      }
+    }
+    .slick-prev-arrow{
+      left: -32px;
+    }
+    .slick-next-arrow{
+      right: -32px;
+    }
+    .slide-contaienr{
+
+    }
     .video-slide{
       overflow: hidden;
-
       .thumb{
         position: relative;
         overflow: hidden;
         display: inline-block;
-        a{
-          position: absolute;
+        padding: 0;
+        margin: 0 8px;
+        overflow: hidden;
+        height: 220px;
+        background: #000;
+        &:hover{
+          iframe{
+            opacity: 0.8;
+          }
+          .link-block img{
+            opacity: 0.8;
+          }
+        }
+        iframe{
           width: 100%;
           height: 100%;
-          z-index: 50;
-          left: 0;
-          top: 0;
-          text-decoration: none;
-          color: #FFF;
+          opacity: 0.7;
         }
-        img{
-          width: 94%;
+        a.link-block{
+          width: 100%;
+          height: 100%;
           display: block;
-          margin: 0 auto;
-          overflow: hidden;
+          position: relative;
+          img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 12;
+            opacity: 0.7;
+          }
+          span{
+            position: absolute;
+            left: 10px;
+            top: 48px;
+            padding: 10px;
+            text-align: left;
+            font-size: 26px;
+            color: #fff;
+            z-index: 15;
+          }
         }
         .desc{
           position: absolute;
@@ -131,58 +185,49 @@
           color: #fff;
           text-align: left;
           left: 0;
-          padding: 2px 12px 2px;
-          width: 94%;
-          height: 26px;
-          z-index: 2;
-          left: 3%;
-          i{
-            float: right;
-            color: #fff;
-            margin-right: 5px;
-            display: none;
-          }
+          padding: 8px 12px;
+          width: 100%;
+          height: 36px;
+          z-index: 18;
         }
         .desc-bg{
+          background: #000;
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 94%;
-          height: 26px;
-          padding: 2px 12px 2px;
-          z-index: 1;
-          background: #333;
-          opacity: 0.7;
-          left: 3%;
+          width: 100%;
+          height: 36px;
+          z-index: 17;
+          opacity: 0.4;
         }
-      }
-      .thumb:hover .desc i{
-        display: block;
       }
     }
   }
 
   #business {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     .heading{
-      padding-top: 45px; 
-      padding-bottom: 45px;
+      padding-top: 55px; 
+      padding-bottom: 40px;
       border-bottom: 1px solid #ddd;
       background: #fff;
-      margin-bottom: 45px;
+      margin-bottom: 80px;
       h4{
         text-align: center;
-        color: #888;
-        font-size: 20px;
+        color: #79828f;
+        font-size: 26px;
+        font-weight: lighter;
       }
       p{
         text-align: center;
         text-transform: uppercase;
-        background: #888;
+        background: #79828f;
         color: #fff;
         width: 150px;
         padding: 2px;
         margin: 0 auto;
+        font-size: 14px;
+        font-weight: lighter;
       }
     }
     .container{
@@ -191,33 +236,34 @@
         display: inline-block;
         width: 300px;
         height: 100px;
-        margin: 28px 0;
-        padding: 0px 15px 0 25px;
+        margin: 0 0 80px;
+        padding: 0px 25px 0 35px;
         vertical-align: top;
         .row-1{
           width: 100%;
           position: relative;
           padding-bottom: 10px;
           img{
-            width: 50px;
+            width: 54px;
             position: absolute;
-            top: 0px;
+            top: 4px;
             left: 0px;
           }
           p{
             text-align: left;
-            color: #888;
+            color: #717071;
             margin: 0;
-            margin-left: 60px; 
+            margin-left: 60px;
+            font-size: 16px; 
           }
           .big{
-            font-size: 18px;
-            margin-top: 5px;
+            font-size: 22px;
           }
         }
         .detail{
           text-align: left;
-          color: #b2b2b2;
+          color: #acb2b8;
+          font-size: 14px;
         }
       }
       #f2, #f3, #f5{
