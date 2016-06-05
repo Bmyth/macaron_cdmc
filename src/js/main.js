@@ -3,8 +3,8 @@ $(function() {
 		slidesToShow: 1,
   		slidesToScroll: 1,
   		adaptiveHeight: true,
-  		prevArrow : "<div class='slick-prev-arrow slick-arrow'><i class='glyphicon glyphicon-chevron-left'></i></div>",
-        nextArrow : "<div class='slick-next-arrow slick-arrow'><i class='glyphicon glyphicon-chevron-right'></i></div>"
+  		prevArrow : "<div class='slick-prev-arrow slick-arrow'><img src='../img/arrow-l.png'></div>",
+        nextArrow : "<div class='slick-next-arrow slick-arrow'><img src='../img/arrow-r.png'></div>"
 	})
 
 	$("#banner .bottom-block li").click(function(){
