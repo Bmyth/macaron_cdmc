@@ -29,7 +29,7 @@ gulp.task('image', function () {
 });
 
 // Combine html files
-gulp.task('html', ['news'], function () {
+gulp.task('html', ['news', 'about', 'business'], function () {
     return gulp.src(['./src/html/*.html'])
         .pipe(combine({
             prefix: '<!--',
@@ -52,6 +52,29 @@ gulp.task('news', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
+// Combine aboutus html files
+gulp.task('about', function () {
+    return gulp.src(['./src/html/about/*.html'])
+        .pipe(combine({
+            prefix: '<!--',
+            suffix: '-->',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./build/html/about/'))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+// Combine business html files
+gulp.task('business', function () {
+    return gulp.src(['./src/html/business/*.html'])
+        .pipe(combine({
+            prefix: '<!--',
+            suffix: '-->',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./build/html/business/'))
+        .pipe(browserSync.reload({stream: true}));
+});
 
 // Compile Js
 gulp.task('js', function () {
