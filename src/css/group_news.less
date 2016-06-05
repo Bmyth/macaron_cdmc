@@ -1,97 +1,26 @@
 .page-group {
   background-color: #f4f5f9;
-
-  .site-main {
-    &.group {
-       div {
-        margin: 1.25rem 0;
-
-        h4 {
-          margin: 1rem 0;
-          color: black;
-        }
-
-        h5 {
-          color: grey;
-        }
-
-        p:last-child {
-          margin-bottom: 1.5rem;
-        }
-
-        img {
-          height: 120px;
-          float: left;
-          padding-right: 20px;
-        }
-
-        hr {
-          height:20px;
-          border:none;
-          border-top:2px solid grey;
-          margin-top: 80px;
-          margin-bottom: 0px;
-        }
-
-        .nav > li > a:focus, a:hover {
-          text-decoration: none;
-          background-color: #53155A;
-          color: #ffffff;
-        }
-
-        a {
-          color: #808080;
-          text-decoration: none;
-        }
-
-        .page {
-          padding: 50px 3px 100px 3px;
-          text-align: left;
-
-          > a {
-            padding: 2px 5px 2px 5px;
-            margin: 2px;
-            color: grey;
-          }
-
-          .border {
-            border: 1px solid black;
-            margin: 20px 40px 20px 40px;
-            padding: 15px 30px 15px 30px;
-            text-transform: uppercase;
-          }
-        }
-      }
-
-
-      .footer {
-        border: none;
-        box-shadow: none;
-
-        > span {
-          display: inline-block;
-          text-indent: 2px;
-          color: #888;
-        }
-        .qr-code {
-          .square(105px);
-          background: url('../img/QR-code.png') no-repeat scroll center center;
-          background-size: 100%;
-          margin: 10px 0 30px 0;
-        }
-      }
-    }
+  padding-top: 20px;
+  .news-list{
+    min-height: 550px;
   }
-
-  footer .qr-code {
-    display: none;
-    visibility: hidden;
-  }
-
   .sub-ul {
     list-style-type:none;
     margin-left: 20px;
     padding-left:20px;
-    border-left: 1px solid grey;
+    li a{
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin-left: -42px;
+      border-radius: 9px;
+      margin-bottom: 6px;
+    }
+    li.active{
+      a{
+        background: @site-color;
+        color: #fff;
+      }
+    }
   }
 }
