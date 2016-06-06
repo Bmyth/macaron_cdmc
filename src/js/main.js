@@ -33,4 +33,8 @@ $(function() {
 	$("#video-container .slick-next-arrow").click(function(){
 		$(".video-slide").slick('slickNext');
 	})
+
+	var idx = $("body").attr("idx");
+
+	$("#main-navbar li a[idx='" + idx + "']").addClass('active');
 })
