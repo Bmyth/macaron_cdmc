@@ -1,7 +1,7 @@
 .page-events {
   .main-event{
     padding: 10px;
-    margin-bottom: 40px;
+    margin-bottom:0px;
     a{
       display: inline-block;
       width: 90%;
@@ -41,9 +41,13 @@
 
   .history-events{
     text-align: left;
+    p{
+      font-size: 16px;
+    }
     a{
-      display: inline-block;
-      margin: 5px;
+      display: block;
+      margin: 5px 0;
+      color: #666;
     }
 
   }
@@ -52,28 +56,33 @@
     padding: 0;
     list-style-type: none;
     list-style: none;
-    width: 75%;
+    width: 90%;
     li{
-      list-style-type: none;
-      list-style: none;
-      margin-bottom: 20px;
       position: relative;
       padding: 5px;
+      margin-bottom: 20px;
       .thumb{
         display: inline-block;
         width: 200px;
+        overflow: hidden;
+        height: 80px;
         overflow: hidden;
         img{
           width: 100%;
         }
       }
-      .name{
+      p{
         position: absolute;
-        display: inline-block;
-        left: 270px;
+        left: 230px;
         top: 10px;
-        font-size: 20px;
         color: #888;
+        a.name{
+          display: block;
+          width: 100%;
+          color: #444;
+          font-size: 20px;
+          color: #555;
+        }
       }
     }
   }
