@@ -21,8 +21,8 @@ $(function() {
 	})
 
 	$(".video-slide").slick({
-		slidesToShow: 4,
-  		slidesToScroll: 2,
+		slidesToShow: 3,
+  		slidesToScroll: 1,
   		arrows: false
 	});
 
