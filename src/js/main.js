@@ -38,7 +38,7 @@ $(function() {
 
 	$("#main-navbar li a[idx='" + idx + "']").addClass('active');
 
-	var h = parseInt($(window).height() - 77 - 180);
+	var h = parseInt($(window).height() - 250);
 	$(".site-content").css('min-height', h);
 	$("footer").show();
 })
