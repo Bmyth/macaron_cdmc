@@ -37,4 +37,8 @@ $(function() {
 	var idx = $("body").attr("idx");
 
 	$("#main-navbar li a[idx='" + idx + "']").addClass('active');
+
+	var h = parseInt($(window).height() - 77 - 180);
+	$(".site-content").css('min-height', h);
+	$("footer").show();
 })
