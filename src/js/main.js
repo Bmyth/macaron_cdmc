@@ -41,4 +41,9 @@ $(function() {
 	var h = parseInt($(window).height() - 250);
 	$(".site-content").css('min-height', h);
 	$("footer").show();
+
+	$(".page-events .other-events p").click(function() {
+		var idx = $(this).attr('index');
+		$(".page-events .main-event").html($(".page-events .details .item[index=" + idx + "]").html());
+	})
 })
