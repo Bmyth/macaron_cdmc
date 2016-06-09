@@ -46,4 +46,8 @@ $(function() {
 		var idx = $(this).attr('index');
 		$(".page-events .main-event").html($(".page-events .details .item[index=" + idx + "]").html());
 	})
+
+	$(".page-index #video-container .thumb").click(function() {
+		$("#videoModal").modal();
+	})
 })
