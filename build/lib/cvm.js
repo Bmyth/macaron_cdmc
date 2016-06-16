@@ -592,7 +592,7 @@ function  Element (element, mode,  $container) {
         scope.attrs.height = getAttr(scope.element, 'height') ? getAttr(scope.element, 'height') : 'auto';
         scope.attrs.category = getAttr(scope.element, 'category') ? getAttr(scope.element, 'category') : '';
 
-        scope.attrs.css = templateRender(scope, 'style_element');
+        scope.attrs.css = "";
         if(scope.attrs.cssValue){
             scope.attrs.css =  scope.attrs.css + interpolate(scope.attrs.cssValue);
         }

@@ -12,12 +12,16 @@
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    .slide:hover .slick-arrow{
+      display: block !important;
+    }
     .slide{
       position: relative;
       .slick-arrow{
         position: absolute;
         z-index: 100;
         cursor: pointer;
+        display: none !important;
         img{
           width: 48px;
         }
@@ -104,35 +108,39 @@
   }
 
   #video-container{
-    margin: 40px 32px;
+    width: 1158px;
+    margin: 40px auto;
     background: #fff;
     position: relative;
+    &.wide-mode{
+      width: 1600;
+    }
     .slick-arrow{
       position: absolute;
       height: 100%;
       width: 40px;
       top: 0;
       z-index: 100px;
-      background: #eee;
+      background: transparent;
       cursor: pointer;
-      i{
+      img{
         position: relative;
-        top: 45%;
-        width: 100%;
+        margin: 0;
+        width: 10px;
         display: inline-block;
         padding: 0;
-        text-align: center;
-        color: #aaa;
+        top: 84px;
+        left: 14px;
       }
+    }
+    .slick-arrow:hover{
+      background: #eef0f1;
     }
     .slick-prev-arrow{
       left: -32px;
     }
     .slick-next-arrow{
       right: -32px;
-    }
-    .slide-contaienr{
-
     }
     .video-slide{
       overflow: hidden;
@@ -143,7 +151,7 @@
         padding: 0;
         margin: 0 8px;
         overflow: hidden;
-        height: 220px;
+        height: 200px;
         background: #000;
         &:hover{
           .link-block img{
@@ -154,9 +162,9 @@
           iframe{
             opacity: 1;
           }
-          .desc, .desc-bg{
-            display: none;
-          }
+        }
+        &.video{
+          
         }
 
         iframe{
@@ -271,6 +279,7 @@
             margin: 0;
             margin-left: 56px;
             font-size: 16px; 
+            width: 200px;
           }
           .big{
             font-size: 22px;

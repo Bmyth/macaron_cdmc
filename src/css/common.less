@@ -56,11 +56,13 @@ header {
     }
 
     .navbar-brand {
-      width: 200px;
-      height: 48px;
+      width: 220px;
+      height: 90px;
       padding: 0;
-      margin: 20px 0 0 0;
-      overflow: hidden;
+      margin: -12px 0 0;
+      img{
+        width: 100%;
+      }
     }
 
     .navbar-nav {
@@ -118,7 +120,7 @@ header {
 }
 
 footer {
-  padding: 20px 0;
+  padding: 40px 0;
   width: 100%;
   font-size: @font-size-small;
   background: #eee;
@@ -160,12 +162,29 @@ footer {
         a{
           padding: 0 2px;
         }
+        li{
+          .grey{
+            display: inline-block;
+          }
+          .highlight{
+            display: none;
+          }
+        }
+        li:hover{
+          .grey{
+            display: none;
+          }
+          .highlight{
+            display: inline-block;
+          }
+        }
       }
       p{
         color: #999;
         margin: 4px 0;
         font-size: 12px;
       }
+
     }
   }
 }
