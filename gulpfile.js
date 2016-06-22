@@ -29,7 +29,7 @@ gulp.task('image', function () {
 });
 
 // Combine html files
-gulp.task('html', ['news', 'about', 'business'], function () {
+gulp.task('html', ['news', 'about', 'business', 'hire'], function () {
     return gulp.src(['./src/html/*.html'])
         .pipe(combine({
             prefix: '<!--',
@@ -73,6 +73,18 @@ gulp.task('business', function () {
             basepath: '@file'
         }))
         .pipe(gulp.dest('./build/html/business/'))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+// Combine hire html files
+gulp.task('hire', function () {
+    return gulp.src(['./src/html/hire/*.html'])
+        .pipe(combine({
+            prefix: '<!--',
+            suffix: '-->',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./build/html/hire/'))
         .pipe(browserSync.reload({stream: true}));
 });
 

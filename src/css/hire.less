@@ -1,178 +1,91 @@
 .page-hire {
-  background-color: #fff;
+  background-color: #f4f5f9;
 
-  .site-main {
-    .title {
-      color: @site-color;
-      margin-bottom: 20px;
-    }
-
+  .site-content {
     &.hire {
-      .introduction {
-        .clearfix();
-        position: relative;
-        background-color: #f4f5f9;
-        padding: 0 25px 25px;
+      div {
 
-        .intro-tip {
-          > div {
-            line-height: 25px;
-          }
+        h2 {
+          color: black;
+          margin-top: 10px;
         }
 
-        .logo {
-          text-align: center;
-
-          img {
-            width: 230px;
-          }
-        }
-      }
-
-      .jobs-description {
-        margin-top: 30px;
-        margin-bottom: 40px;
-
-        .title {
-          padding: 0 15px;
+        h4 {
+          color: grey;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
         }
 
-        .job-section {
-          margin: 25px 0;
-          padding: 0  15px 25px;
-          border-bottom: 1px solid #d7d7d7;
-          box-shadow: 0 1px 0 #fff;
-          overflow: hidden;
+        p:last-child {
+          margin-bottom: 1.5rem;
+        }
 
-          .get-job {
-            vertical-align: middle;
-            color: #333;
-            text-decoration: none;
-            font-size: @font-size-large;
-            position: relative;
+        .img {
+          .square(300px);
+          float: left;
+          padding-right: 10px;
+        }
 
-            &::before {
-              content: ' ';
-              position: absolute;
-              bottom: 0;
-              right: -24px;
-              border: 9px solid #333;
-              border-top-color: transparent;
-              border-bottom-color: transparent;
-              border-right: 0;
-            }
+        hr {
+          height:0px;
+          width: 200px;
+          border-top:2px solid #FFA500;
+          margin-bottom: 5px;
+        }
 
-            &::after {
-              content: ' ';
-              position: absolute;
-              bottom: 0;
-              right: -22px;
-              border: 9px solid #fff;
-              border-top-color: transparent;
-              border-bottom-color: transparent;
-              border-right: 0;
-            }
+        .nav > li > a:focus, a:hover {
+          text-decoration: none;
+          background-color: #53155A;
+          color: #ffffff;
+        }
 
-            &[aria-expanded="true"] {
-              &::before {
-                content: ' ';
-                position: absolute;
-                bottom: 2px;
-                right: -26px;
-                border: 9px solid #333;
-                border-left-color: transparent;
-                border-right-color: transparent;
-                border-bottom: 0;
-              }
+        .nav > li > a {
+          padding: 1px 10px;
+        }
 
-              &::after {
-                content: ' ';
-                position: absolute;
-                bottom: 4px;
-                right: -26px;
-                border: 9px solid #fff;
-                border-left-color: transparent;
-                border-right-color: transparent;
-                border-bottom: 0;
-              }
-            }
-          }
-
-          .btn-primary {
-            position: relative;
-            color: @site-color;
-            float: right;
-            background-color: #fff;
-            border-color: @site-color;
-            border-radius: 0;
-            padding: 8px 30px;
-          }
-
-          .detail {
-            color: #888;
-
-            article {
-              padding-top: 15px;
-
-              > div {
-                padding: 8px 0;
-              }
-            }
-          }
+        a {
+          color: #808080;
+          text-decoration: none;
         }
       }
+
     }
   }
 
-  footer .qr-code {
-    display: none;
-    visibility: hidden;
+  .left-block {
+    display:inline-block;
+    width: 30%;
+    padding-right: 10px
   }
-}
 
-.mobile-view {
-  .site-main {
-    &.hire {
-      .introduction .logo {
-        display: none;
-      }
+  .right-block {
+    display:inline-block;
+    width: 30%;
+    padding-right: 10px
+  }
 
-      .jobs-description {
-        .job-section {
-          .get-job {
-            font-size: 0.7rem;
+  .line {
+    display: inline-block;
+    width:1px; height:100px;
+    border-left: 1px solid #000;
+  }
 
-            &::before,
-            &::after {
-              bottom: 2px;
-              border-width: 6px;
-            }
-
-            &::before {
-              right: -16px;
-            }
-
-            &::after {
-              right: -15px;
-            }
-
-            &[aria-expanded="true"] {
-              &::before,
-              &::after {
-                right: -16px;
-                border-width: 6px;
-              }
-
-              &::before {
-                bottom: 5px;
-              }
-
-              &::after {
-                bottom: 6px;
-              }
-            }
-          }
-        }
+  .sub-ul {
+    list-style-type:none;
+    margin-left: 20px;
+    padding-left:20px;
+    li a{
+      text-align: left;
+      display: inline-block;
+      width: 120%;
+      margin-left: -42px;
+      border-radius: 9px;
+      margin-bottom: 6px;
+    }
+    li.active{
+      a{
+        background: @site-color;
+        color: #fff;
       }
     }
   }
