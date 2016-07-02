@@ -1,10 +1,16 @@
 $(function() {
 	var w = $(window).width();
 
+	var videos = {
+		v1 : "../video/test.mp4",
+		v2 : "../video/test.mp4"
+	}
+
 	$("#banner .slide").slick({
 		slidesToShow: 1,
   		slidesToScroll: 1,
   		adaptiveHeight: true,
+  		lazyLoad: 'ondemand',
   		prevArrow : "<div class='slick-prev-arrow slick-arrow'><img src='../img/arrow-l.png'></div>",
         nextArrow : "<div class='slick-next-arrow slick-arrow'><img src='../img/arrow-r.png'></div>"
 	})
@@ -42,6 +48,11 @@ $(function() {
 		$(".video-slide").slick('slickNext');
 	})
 
+	$("#video-container .video").click(function(){
+		var src = $(this).attr('vid');
+		popup(src);
+	})
+
 	var idx = $("body").attr("idx");
 
 	$("#main-navbar li a[idx='" + idx + "']").addClass('active');
@@ -55,7 +66,18 @@ $(function() {
 		$(".page-events .main-event").html($(".page-events .details .item[index=" + idx + "]").html());
 	})
 
-	// $(".page-index #video-container .thumb").click(function() {
-	// 	$("#videoModal").modal();
-	// })
+	function popup(src) {
+		var v = "<video width='540' height='340' src='" + videos[src] + "'></video>";
+
+		var vc = $(".video-modal .video-c").html(v);
+		// $("#v1").appendTo(vc);
+		window.player = new MediaElementPlayer('.video-modal video');
+		$(".video-modal").modal();
+		window.player.play();
+
+		$(".video-modal").click(function(){
+			window.player.pause();
+			$(".video-modal .video-c").empty();
+		})
+	}
 })

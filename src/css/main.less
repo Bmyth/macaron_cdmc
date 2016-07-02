@@ -153,6 +153,15 @@
         overflow: hidden;
         height: 200px;
         background: #000;
+        cursor: pointer;
+        .link-block{
+          width: 100%;
+          height: 200px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
         &:hover{
           .link-block img{
             opacity: 0.8;
@@ -294,6 +303,12 @@
       #f2, #f3, #f5{
         border-left: 1px solid #ddd; 
       }
+    }
+  }
+  .modal-dialog{
+    width: 574px;
+    .mejs-fullscreen-button{
+      display: none;
     }
   }
 }

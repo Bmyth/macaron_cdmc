@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../img/CDMC-logo.png">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../lib/slick/slick.css">
+    <link rel="stylesheet" href="../lib/mediaelement/mediaelementplayer.css" />
 </head>
 <body class="page-index" idx="main">
 <header class="site-header">
@@ -43,21 +44,21 @@
     <div id="banner">
         <div class="slide">
             <div class="banner-item">
-                <img src="../img/合作伙伴.png">
+                <img src="../img/合作伙伴.png"/>
             </div>
             <div class="banner-item">
                 <!--<a href="http://www.oc-annual.com" target="_blank">-->
-                    <img src="../img/客户.png">
+                <img src="../img/客户.png"/>
                 <!--</a>-->
             </div>
             <div class="banner-item">
                 <!--<a href="http://www.essc.org.cn" target="_blank">-->
-                    <img src="../img/应聘者.jpg">
+                    <img src="../img/应聘者.jpg"/>
                 <!--</a>-->
             </div>
             <div class="banner-item">
                 <!--<a href="http://www.tpasa.org.cn" target="_blank">-->
-                    <img src="../img/投资者.png">
+                    <img src="../img/投资者.png"/>
                 <!--</a>-->
             </div>
             
@@ -79,10 +80,10 @@
         <div class='slick-next-arrow slick-arrow'><img src="../img/fw.png" alt=""></div>
         <div class="slide-contaienr">
             <div class="video-slide">
-                <div class="thumb video" >
-                    <a class="link-block" target="_blank" href="http://v.youku.com/v_show/id_XNTEyMDQxNjY4.html">
+                <div class="thumb video" vid="v1">
+                    <div class="link-block" target="_blank" href="http://v.youku.com/v_show/id_XNTEyMDQxNjY4.html">
                         <img src="http://www.cdmc.org.cn/cn/images/pic/who2-2.jpg">
-                    </a>
+                    </div>
                     <div class="desc">
                         CDMC上海决策者经济顾问有限公司
                     </div>
@@ -100,10 +101,10 @@
                     <div class="desc-bg"></div>
                 </div>
 
-                <div class="thumb video">
-                    <a class="link-block" target="_blank" href="http://v.youku.com/v_show/id_XMTQwOTk3MDkyNA==.html">
+                <div class="thumb video" vid="v2">
+                    <div class="link-block" target="_blank" href="http://v.youku.com/v_show/id_XMTQwOTk3MDkyNA==.html">
                         <img src="http://elbucket.qiniudn.com/o_1ajj289is4qgehu1vvj1gmtrr08.jpg">
-                    </a>
+                    </div>
                     <div class="desc">
                         第八届互联网金融与支付创新年度盛会
                     </div>
@@ -122,26 +123,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="videoModal-1">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <iframe height=498 width=100% src="http://player.youku.com/embed/XNTEyMDQxNjY4" frameborder=0 allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="videoModal-2">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <iframe height=498 width=100% src="http://player.youku.com/embed/XMTQwOTk3MDkyNA==" frameborder=0 allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- business -->
@@ -208,9 +189,19 @@
 
         </div>
     </div>
-
 </div>
-</body>
+
+<div class="video-modal fade modal" style="display:none">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="video-c">
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <footer style="display:none;">
     	<div class="container">
     		<div class="left-side">
@@ -247,7 +238,10 @@
     <script src="../lib/jquery.min.js"></script>
     <script src="../lib/slick/slick.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/mediaelement/mediaelement-and-player.min.js"></script>
     <script src="../lib/cvm.js"></script>
     <script src="../js/app.js"></script>
 </body>
 </html>
+
+</body>
