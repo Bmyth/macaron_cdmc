@@ -2,8 +2,8 @@ $(function() {
 	var w = $(window).width();
 
 	var videos = {
-		v1 : "../video/test.mp4",
-		v2 : "../video/test.mp4"
+		v1 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
+		v2 : "http://storage.eventslin.com/主题公园花絮.mp4"
 	}
 
 	$("#banner .slide").slick({
