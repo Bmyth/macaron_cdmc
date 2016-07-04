@@ -75,9 +75,13 @@ $(function() {
 		$(".video-modal").modal();
 		window.player.play();
 
-		$(".video-modal").click(function(){
-			window.player.pause();
-			$(".video-modal .video-c").empty();
+		$(".video-modal").click(function(e){
+			var outer = $(e.target).find(".modal-dialog").length > 0;
+			if(outer){
+				window.player.pause();
+				$(".video-modal .video-c").empty();
+			}
+
 		})
 	}
 })

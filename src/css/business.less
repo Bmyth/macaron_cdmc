@@ -72,15 +72,21 @@
 
   .sub-ul {
     list-style-type:none;
-    margin-left: 20px;
-    padding-left:20px;
     li a{
       text-align: left;
       display: inline-block;
       width: 120%;
-      margin-left: -42px;
       border-radius: 9px;
       margin-bottom: 6px;
+      position: relative;
+      padding-left: 24px !important;
+      width: 124px;
+
+      .glyphicon{
+          position: absolute;
+          left: 4px;
+          top: 4px;
+      }
     }
     li.active{
       a{
