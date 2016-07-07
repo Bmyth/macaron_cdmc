@@ -3,7 +3,8 @@ $(function() {
 
 	var videos = {
 		v1 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
-		v2 : "http://storage.eventslin.com/主题公园花絮.mp4"
+		v2 : "http://storage.eventslin.com/主题公园花絮.mp4",
+		v3 : "http://storage.eventslin.com/%E6%B7%B1%E5%9C%B3%E5%B8%8C%E5%B0%94%E9%A1%BF%E6%B2%B9%E4%BC%9A.MP4"
 	}
 
 	$("#banner .slide").slick({
