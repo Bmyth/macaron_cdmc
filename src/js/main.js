@@ -2,9 +2,12 @@ $(function() {
 	var w = $(window).width();
 
 	var videos = {
-		v1 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
-		v2 : "http://storage.eventslin.com/主题公园花絮.mp4",
-		v3 : "http://storage.eventslin.com/%E6%B7%B1%E5%9C%B3%E5%B8%8C%E5%B0%94%E9%A1%BF%E6%B2%B9%E4%BC%9A.MP4"
+		v1 : "http://storage.eventslin.com/决策者敲钟仪式.MP4",
+		v2 : "http://storage.eventslin.com/CDMC影像集锦.MP4",
+		v3 : "http://storage.eventslin.com/主题公园花絮.mp4",
+		v4 : "http://storage.eventslin.com/深圳希尔顿油会.MP4",
+		v5 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
+		v6 : "http://storage.eventslin.com/绿色汽车.MP4"
 	}
 
 	$("#banner .slide").slick({
