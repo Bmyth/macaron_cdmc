@@ -3,7 +3,7 @@ $(function() {
 
 	var videos = {
 		v1 : "http://storage.eventslin.com/决策者敲钟仪式.MP4",
-		v2 : "http://storage.eventslin.com/CDMC影像集锦.MP4",
+		v2 : "http://storage.eventslin.com/CDMC风采集锦-3.mp4",
 		v3 : "http://storage.eventslin.com/主题公园花絮.mp4",
 		v4 : "http://storage.eventslin.com/深圳希尔顿油会.MP4",
 		v5 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
