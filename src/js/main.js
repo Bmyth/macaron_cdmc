@@ -7,7 +7,8 @@ $(function() {
 		v3 : "http://storage.eventslin.com/主题公园花絮.mp4",
 		v4 : "http://storage.eventslin.com/深圳希尔顿油会.MP4",
 		v5 : "http://storage.eventslin.com/互联网金融与支付创新.mp4",
-		v6 : "http://storage.eventslin.com/绿色汽车.MP4"
+		v6 : "http://storage.eventslin.com/绿色汽车.MP4",
+		v7 : "http://storage.eventslin.com/决策者最终版.mp4"
 	}
 
 	$("#banner .slide").slick({
