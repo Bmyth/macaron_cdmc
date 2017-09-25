@@ -126,7 +126,8 @@ gulp.task('watch', function () {
 
     browserSync.init(files, {
         server: {
-            baseDir: './build/'
+            baseDir: './build/',
+            directory: true
         }
     });
 });
