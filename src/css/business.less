@@ -1,6 +1,89 @@
+@media screen and (max-width: 767px) {
+  div[bmy-channel] img {
+    width: 100%;
+  }
+  #am-1773-element, #am-1816-element, #am-1810-element, #am-677-section .am-image-element {
+    width: 100% !important;
+  }
+  .site-content {
+    .ul-block>li>a {
+      width: 100% !important;
+    }
+    .nav>li>a {
+      padding: 1px 10px !important;
+      width: 100% !important;
+    }
+    div[channelid="308"], div[channelid="457"] {
+      table, tbody, tr, td {
+        display: block;
+        width: 100% !important;
+        height: auto;
+      }
+      td img {
+        border-bottom: 1px solid white;
+      }
+      div.element-content > div > div > div {
+        padding: 0 !important;
+        border: 1px solid white;
+      }
+      table > tbody > tr:nth-child(2) > td > div:nth-child(2) > div:nth-child(3) > table {
+        background-color: transparent !important;
+        tbody tr {
+          display: inline;
+          td {
+            display: inline;
+            img {
+              height: 50px !important;
+              width: 60px !important;
+            }
+          }
+        }
+      }
+      table > tbody > tr:nth-child(2) > td > div:nth-child(4) > table:nth-child(4) > tbody > tr > td > div {
+        width: 100% !important;
+      }
+      table > tbody > tr:nth-child(3) > td > table > tbody > tr > td {
+        padding: 15px;
+      }
+    }
+  }
+  footer .right-side {
+    position: relative;
+    left: 0;
+  }
+  footer .right-side .follow {
+    padding-top: 0px;
+  }
+}
 .page-business {
   background-color: #f4f5f9;
-
+  .site-header {
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-nav {
+      margin-right: 5px;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar-nav {
+        background: #53155a;
+        opacity: 0.7
+      }
+      .navbar-nav>li {
+        padding: 5px 0 20px !important;
+      }
+    }
+    .navbar-collapse {
+      overflow: hidden;
+    }
+  }
+  .navbar .navbar-toggle {
+    margin-top: 20px;
+    .icon-bar {
+      background-color: white;
+    }
+  }
   .site-content {
     &.business {
        div {
