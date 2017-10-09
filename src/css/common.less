@@ -11,7 +11,7 @@ html, body {
 }
 
 .container{
-  width: 1140px !important;
+  /*width: 1140px;*/
 }
 
 .site-content{
@@ -119,6 +119,56 @@ header {
   }
 }
 
+.bs-docs-sidebar{
+  li {
+    width: 100%;
+    a{
+      display: inline-block;
+      width: 100%;
+      padding: 1px 10px;
+      text-align: left;
+      position: relative;
+      width: 124px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bs-docs-sidebar{
+    li {
+      a{
+        text-align: left !important;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  .site-header{
+    .navbar-nav li>a{
+      padding: 5px !important;
+    }
+    .navbar-brand{
+      width: 180px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .bs-docs-sidenav{
+    .sub-ul{
+      li{
+        display: inline-block;
+        width: 150px;
+        a{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 footer {
   padding: 40px 0;
   width: 100%;
@@ -128,6 +178,9 @@ footer {
     position: relative;
   }
   .left-side{
+    float: left;
+    margin: 0 25px;
+    width: 45%;
     img{
       width: 220px;
       margin-bottom: 14px;
@@ -143,9 +196,11 @@ footer {
     }
   }
   .right-side{
-    position: absolute;
-    left: 520px;
+    float: left;
+    position: relative;
     top: 8px;
+    margin: 0 25px;
+    width: 40%;
     img.wx{
       width: 135px;
       position: absolute;
@@ -163,6 +218,13 @@ footer {
           padding: 0 2px;
         }
         li{
+          a{
+            img{
+              display: inline-block;
+              float: left;
+              margin: 4px;
+            }
+          }
           .grey{
             display: inline-block;
           }
@@ -185,6 +247,14 @@ footer {
         font-size: 12px;
       }
 
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  footer{
+    .left-side, .right-side{
+      width: 80%;
     }
   }
 }
