@@ -1,6 +1,67 @@
+@media screen and (max-width: 767px) {
+  div[bmy-channel] img {
+    width: 100%;
+  }
+  #am-2032-element {
+    section.e7editor section.E7wei > section {
+      margin: 0 !important;
+      img {
+        display: none;
+      }
+      section > section {
+        margin-left: 0 !important;
+      }
+      section:nth-child(2) {
+        margin: -6em 0 !important;
+      }
+    }
+  }
+  .site-content.hire .glyphicon-record {
+    margin-right: 5px;
+  }
+  .page-hire {
+    .site-content {
+      .bs-docs-sidenav {
+        margin-bottom: 20px;
+      }
+      .sub-ul {
+        margin-left: 0;
+        li a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
 .page-hire {
   background-color: #f4f5f9;
-
+  .site-header {
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-nav {
+      margin-right: 5px;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar-nav {
+        background: #53155a;
+        opacity: 0.7
+      }
+      .navbar-nav>li {
+        padding: 5px 0 20px !important;
+      }
+    }
+    .navbar-collapse {
+      overflow: hidden;
+    }
+  }
+  .navbar .navbar-toggle {
+    margin-top: 20px;
+    .icon-bar {
+      background-color: white;
+    }
+  }
   .site-content {
     &.hire {
       div {

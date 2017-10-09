@@ -15,9 +15,11 @@ fontSizeDetector = function() {
 mobileDetector = function() {
   if ($(window).width() < MOBILE_BREAK_POINT) {
     $('body').addClass('mobile-view');
+    $('.container').removeClass('container').addClass('container-fluid');
     return fontSizeDetector();
   } else {
     $('body').removeClass('mobile-view');
+    $('.container-fluid').removeClass('container-fluid').addClass('container');
     return document.documentElement.style.fontSize = 20 + 'px';
   }
 };

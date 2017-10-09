@@ -1,5 +1,55 @@
-
-  .news-detail{
+@media screen and (max-width: 767px) {
+  div[bmy-channel] img {
+    width: 100%;
+  }
+  .americano-division {
+    width: 100% !important;
+  }
+  .page-group {
+    .site-content {
+      .bs-docs-sidenav {
+        margin-bottom: 20px;
+      }
+      .bs-docs-sidenav > li > a {
+        display: none;
+      }
+      .sub-ul {
+        margin-left: 0;
+        li a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .site-header {
+    .navbar-nav {
+      background: #53155a;
+      opacity: 0.7
+    }
+    .navbar-nav>li {
+      padding: 5px 0 20px !important;
+    }
+  }
+}
+.site-header {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-nav {
+    margin-right: 5px;
+  }
+  .navbar-collapse {
+    overflow: hidden;
+  }
+}
+.navbar .navbar-toggle {
+  margin-top: 20px;
+  .icon-bar {
+    background-color: white;
+  }
+}
+.news-detail{
     .head-section{
       .am-itemtitle-element p{
         font-size: 24px !important;
@@ -31,8 +81,4 @@
 
 .news-list .am-itemtitle-element p{
   cursor: pointer;
-}
-
-.mobile-view {
-  
 }

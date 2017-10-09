@@ -1,8 +1,109 @@
+@media screen and (max-width: 767px) {
+  div[bmy-channel] img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #am-2039-element img, #am-2748-element img {
+    width: 84px !important;
+    height: 84px !important;
+  }
+  #am-1832-element, #am-2764-element {
+    img {
+      width: auto !important;
+      height: auto !important;
+    }
+    tr td{
+      display: inline-block;
+    }
+    table {
+      width: 100% !important;
+    }
+  }
+  #am-2095-element {
+    ul {
+      padding-left: 0;
+      p {
+        padding-left: 0;
+        margin-left: 5px !important;
+      }
+    }
+  }
+  #am-2097-element, #am-2770-element {
+    section.e7editor section.E7wei > section {
+      margin: 0 !important;
+      img {
+        display: none;
+      }
+      section > section {
+        margin-left: 0 !important;
+      }
+      section:nth-child(2) {
+        margin: -6em 0 !important;
+      }
+    }
+  }
+  #am-2089-element, #am-2771-element {
+    section.articlee7 section.E7wei > section:nth-child(1) > section:nth-child(1) {
+      width: 100% !important;
+    }
+    div.element-content > div > div > section:nth-child(12) > section:nth-child(3) {
+      background-color: transparent !important;
+      section {
+        background-color: white !important;
+      }
+    }
+  }
+  .site-content div .ul-block>li>a {
+    width: 100%;
+    padding-left: 24px!important;
+  }
+  #am-2266-element, #am-1884-element, #am-1793-element {
+    width: 100% !important;
+  }
+  #am-2755-element, #am-2769-element, #am-2770-element {
+    word-break: break-all;
+  }
+  .page-aboutus {
+    .site-content {
+      .bs-docs-sidenav {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 .page-aboutus {
   background-color: #f4f5f9;
   
   .head-section{
     display: none;
+  }
+
+  .site-header {
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-nav {
+      margin-right: 5px;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar-nav {
+        background: #53155a;
+        opacity: 0.7
+      }
+      .navbar-nav>li {
+        padding: 5px 0 20px !important;
+      }
+    }
+    .navbar-collapse {
+      overflow: hidden;
+    }
+  }
+  .navbar .navbar-toggle {
+    margin-top: 20px;
+    .icon-bar {
+      background-color: white;
+    }
   }
 
   .site-content {
