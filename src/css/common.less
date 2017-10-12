@@ -120,28 +120,97 @@ header {
 }
 
 .bs-docs-sidebar{
+  .bs-docs-sidenav, .sub-ul {
+    list-style-type:none;
+    padding: 0;
+  }
   li {
     width: 100%;
+  }
+  li a{
+    text-align: left;
+    display: inline-block;
+    border-radius: 9px;
+    margin-bottom: 6px;
+    position: relative;
+    padding: 0 10px 0 24px;
+    background: transparent;
+    color: grey !important;
+    cursor: pointer;
+    text-decoration: none;
+    .glyphicon{
+        position: absolute;
+        left: 3px;
+        top: 3px;
+    }
+  }
+  li.active > a, li:hover > a{
+    background: @site-color !important;
+    color: #fff !important;
+  }
+  li .sub-ul li {
+    margin-left: 14px;
     a{
-      display: inline-block;
-      width: 100%;
-      padding: 1px 10px;
-      text-align: left;
-      position: relative;
-      width: 124px !important;
+      padding-left: 10px;
     }
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .bs-docs-sidebar{
-    li {
+    li .sub-ul li {
+      display: inline-block;
+      width: auto;
       a{
-        text-align: left !important;
-        position: relative;
+
       }
     }
   }
+}
+
+.site-header {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-nav {
+    margin-right: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      background: #53155a;
+      opacity: 0.7
+    }
+    .navbar-nav>li {
+      padding: 5px 0 20px !important;
+    }
+  }
+  .navbar-collapse {
+    overflow: hidden;
+  }
+}
+.navbar .navbar-toggle {
+  margin-top: 20px;
+  .icon-bar {
+    background-color: white;
+  }
+}
+.left-block {
+  display:inline-block;
+  width: 30%;
+  padding-right: 10px
+}
+
+.right-block {
+  display:inline-block;
+  width: 30%;
+  padding-right: 10px
+}
+
+.line {
+  display: inline-block;
+  width:1px; height:100px;
+  border-left: 1px solid #000;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
@@ -155,20 +224,6 @@ header {
   }
 }
 
-@media screen and (max-width: 992px){
-  .bs-docs-sidenav{
-    .sub-ul{
-      li{
-        display: inline-block;
-        width: 150px;
-        a{
-          text-align: center;
-        }
-      }
-    }
-  }
-}
-
 footer {
   padding: 40px 0;
   width: 100%;
@@ -176,6 +231,9 @@ footer {
   background: #eee;
   .container{
     position: relative;
+  }
+  p{
+    color: #666;
   }
   .left-side{
     float: left;
@@ -186,7 +244,6 @@ footer {
       margin-bottom: 14px;
     } 
     p{
-      color: #aaa;
       margin: 2px 0;
       font-size: 12px;
       span{
@@ -242,7 +299,6 @@ footer {
         }
       }
       p{
-        color: #999;
         margin: 4px 0;
         font-size: 12px;
       }

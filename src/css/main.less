@@ -8,34 +8,11 @@
 }
 .page-index {
   header .bg{
-    background: #000;
-    opacity: 0.3;
+    background: #53155A;
   }
   .site-main {
     margin: 0px auto 0;
   }
-  .site-header {
-      .navbar-nav {
-        margin-right: 5px;
-      }
-      @media screen and (max-width: 768px) {
-        .navbar-nav {
-          background: #000;
-          opacity: 0.7
-        }
-        .navbar-nav>li {
-          padding: 5px 0 20px !important;
-        }
-      }
-      .navbar-collapse {
-        overflow: hidden;
-      }
-  }
-  .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-  }
-  
   .navbar .navbar-toggle {
     margin-top: 20px;
     .icon-bar {
@@ -237,6 +214,18 @@
         &.video{
           
         }
+        .glyphicon-play{
+          position: absolute;
+          top: 85px;
+          left: 46%;
+          background: #fff;
+          padding: 8px;
+          border-radius: 100%;
+          font-size: 16px;
+          line-height: 16px;
+          display: inline-block;
+          opacity: 0.9;
+        }
 
         iframe{
           width: 100%;
@@ -378,4 +367,14 @@
       display: none;
     }
   }
+  .video-close{
+    position: absolute;
+    color: #333;
+    top: 4px;
+    right: 4px;
+    margin: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
 }

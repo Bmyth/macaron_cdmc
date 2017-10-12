@@ -15,6 +15,7 @@ var devFlagmingoUrl = 'http://localhost:8085';
 setRootUrl(prodFlamingoUrl);
 
 $(function(){
+    $.support.cors = true;
     setMode();
     verdor('underscore', init);
 
@@ -43,7 +44,7 @@ function init(res){
         Section(params, this);
     })
 
-    $("[bmy-channel]").each(function(){
+    $("[bmy-channel], .bmy-channel").each(function(){
         var params = {
             head : $(this).attr('head'),
             setKey : $(this).attr('setkey'),
@@ -56,22 +57,22 @@ function init(res){
         Channel(params, this);
     })
 
-    $("[bmy-carousel-gen = 'true']").remove();
+    $("[bmy-carousel-gen = 'true'], .bmy-carousel-gen").remove();
 
-    $("[bmy-carousel]").each(function(){ 
+    $("[bmy-carousel], .bmy-carousel").each(function(){ 
         var params = {
             autoplay : $(this).attr('autoplay') != undefined
         }
         Carousel(params, $(this));
     })
 
-    $("[bmy-link]").each(function(){
+    $("[bmy-link], .bmy-link").each(function(){
         $(this).click(function(){
             location.href = $(this).attr('bmy-link');
         })
     })
 
-    $("[bmy-set]").each(function(){ 
+    $("[bmy-set], .bmy-set").each(function(){ 
         var params = {
             setKey : $(this).attr('setkey'),
             setValue : $(this).attr('setvalue'),
@@ -269,7 +270,6 @@ function  Channel(params, container) {
 
     var $ele = $(templateRender(scope, 'channel')).appendTo($container);
     bind();
-
     fetch();
 
     if(scope.mode == 'edit'){
@@ -280,6 +280,8 @@ function  Channel(params, container) {
         if(scope.channelId){
             channelService.getChannel(scope.channelId, function(res){
                 scope.channel = res.data;
+                window.console.log('res');
+                window.console.log(res);
                 scope.title = getAttr(scope.channel, 'title') ? getAttr(scope.channel, 'title') : "标题";
                 document.title = scope.title;
                 $container.attr('channelid', channelId);
@@ -1520,7 +1522,14 @@ function getChannelsHead(indexKey, indexValue, callback){
 
 function getChannel(channelId, callback){
 	var url = flamingoRoot + '/flamingo-api/channel/' + channelId;
-	$.getJSON(url, {}, callback, callback);
+
+    $.ajax({
+      url: url,
+      cache: false,
+      dataType: "json",
+      success: callback,
+      error: callback
+    });
 }
 
 function getSectionsAttributes(indexKey, indexValue, callback){

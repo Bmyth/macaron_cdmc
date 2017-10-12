@@ -6,9 +6,6 @@
     width: 100% !important;
   }
   .site-content {
-    .ul-block>li>a {
-      width: 100% !important;
-    }
     .nav>li>a {
       padding: 1px 10px !important;
       width: 100% !important;
@@ -57,33 +54,6 @@
 }
 .page-business {
   background-color: #f4f5f9;
-  .site-header {
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .navbar-nav {
-      margin-right: 5px;
-    }
-    @media screen and (max-width: 768px) {
-      .navbar-nav {
-        background: #53155a;
-        opacity: 0.7
-      }
-      .navbar-nav>li {
-        padding: 5px 0 20px !important;
-      }
-    }
-    .navbar-collapse {
-      overflow: hidden;
-    }
-  }
-  .navbar .navbar-toggle {
-    margin-top: 20px;
-    .icon-bar {
-      background-color: white;
-    }
-  }
   .site-content {
     &.business {
        div {
@@ -132,50 +102,6 @@
         }
       }
 
-    }
-  }
-
-  .left-block {
-    display:inline-block;
-    width: 30%;
-    padding-right: 10px
-  }
-
-  .right-block {
-    display:inline-block;
-    width: 30%;
-    padding-right: 10px
-  }
-
-  .line {
-    display: inline-block;
-    width:1px; height:100px;
-    border-left: 1px solid #000;
-  }
-
-  .sub-ul {
-    list-style-type:none;
-    li a{
-      text-align: left;
-      display: inline-block;
-      width: 120%;
-      border-radius: 9px;
-      margin-bottom: 6px;
-      position: relative;
-      padding-left: 24px !important;
-      width: 124px;
-
-      .glyphicon{
-          position: absolute;
-          left: 4px;
-          top: 4px;
-      }
-    }
-    li.active{
-      a{
-        background: @site-color;
-        color: #fff;
-      }
     }
   }
 }

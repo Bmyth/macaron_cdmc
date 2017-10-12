@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../lib/slick/slick.css">
     <link rel="stylesheet" href="../lib/mediaelement/mediaelementplayer.css" />
+    <!--[if lte IE 9]>
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.0/jquery.xdomainrequest.min.js'></script>
+	<![endif]-->
 </head>
 <body class="page-index" idx="main">
 <header class="site-header">
@@ -35,7 +38,7 @@
                         <li><a href="./events.html" idx="events">行业峰会</a></li>
                         <li><a href="./hire/story.html" idx="hire">招聘培训</a></li>
                         <li><a href="./contact.html" idx="contact">联系我们</a></li>
-                        <li><a href="../en/index.html" idx="contact">ENGLISH</a></li>
+                        <li><a href="../en/index.html" idx="lang">ENGLISH</a></li>
                     </ul>
                 </div>
             </nav>
@@ -237,6 +240,7 @@
 
 <div class="video-modal fade modal" style="display:none">
   <div class="modal-dialog" role="document">
+    <p class="video-close glyphicon glyphicon-remove"></p>
     <div class="modal-content">
       <div class="modal-body">
         <div class="video-c">

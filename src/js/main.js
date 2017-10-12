@@ -62,6 +62,7 @@ $(function () {
 
 	var idx = $("body").attr("idx");
 
+	$("#main-navbar li a").removeClass('active');
 	$("#main-navbar li a[idx='" + idx + "']").addClass('active');
 
 	var h = parseInt($(window).height() - 250);
@@ -71,6 +72,12 @@ $(function () {
 	$(".page-events .other-events p").click(function () {
 		var idx = $(this).attr('index');
 		$(".page-events .main-event").html($(".page-events .details .item[index=" + idx + "]").html());
+	})
+
+	$(".modal-dialog .video-close").click(function () {
+		window.player.pause();
+		$(".video-modal .video-c").empty();
+		$(".video-modal").modal('hide');
 	})
 
 	function popup(src) {

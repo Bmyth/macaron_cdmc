@@ -53,10 +53,6 @@
       }
     }
   }
-  .site-content div .ul-block>li>a {
-    width: 100%;
-    padding-left: 24px!important;
-  }
   #am-2266-element, #am-1884-element, #am-1793-element {
     width: 100% !important;
   }
@@ -76,34 +72,6 @@
   
   .head-section{
     display: none;
-  }
-
-  .site-header {
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .navbar-nav {
-      margin-right: 5px;
-    }
-    @media screen and (max-width: 768px) {
-      .navbar-nav {
-        background: #53155a;
-        opacity: 0.7
-      }
-      .navbar-nav>li {
-        padding: 5px 0 20px !important;
-      }
-    }
-    .navbar-collapse {
-      overflow: hidden;
-    }
-  }
-  .navbar .navbar-toggle {
-    margin-top: 20px;
-    .icon-bar {
-      background-color: white;
-    }
   }
 
   .site-content {
@@ -131,16 +99,10 @@
           margin-bottom: 1.5rem;
         }
 
-        .nav > li > a:focus, a:hover {
+        .nav > li > a:focus, .nav > li > a:hover {
           text-decoration: none;
           background-color: #53155A;
           color: #ffffff;
-        }
-
-        a {
-          color: #808080;
-          text-decoration: none;
-          padding-left: 15px;
         }
 
         .nav>li>a {
@@ -163,38 +125,4 @@
     border-left: 3px solid #A020F0;
     padding: 0 0 0 15px;
   }
-
-  .sub-ul {
-    list-style-type:none;
-  }
-
-  .ul-block {
-    list-style-type:none;
-    > li{
-      width: 100%;
-      a{
-        position: relative;
-        display: inline-block;
-        width: auto;
-        text-align: left;
-        display: inline-block;
-        padding: 2px 24px;
-        border-radius: 9px;
-        margin-bottom: 6px;
-        .glyphicon{
-          position: absolute;
-          left: 4px;
-          top: 4px;
-        }
-      }
-
-    }
-    > li.active {
-      > a {
-        background: @site-color;
-        color: #fff;
-      }
-    }
-  }
-
 }
